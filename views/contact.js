@@ -7,7 +7,9 @@ export default () => {
   u.updatePageTitle(actualView.title);
 
   return `
-        <h1>${actualView.title}</h1>
+        <div class="titleBox">
+            ${actualView.title}
+        </div>
         <p>${actualView.description}</p>
     `;
 };

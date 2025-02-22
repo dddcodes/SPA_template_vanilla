@@ -7,7 +7,9 @@ export default () => {
   u.updatePageTitle(actualView.title);
 
   return `
-        <h1>Bienvenido a ${CONFIG.proyectName}!</h1>
+        <div class="titleBox">
+          Bienvenido a ${CONFIG.proyectName}!
+        </div>
         <p>${actualView.description}</p>
     `;
 };
