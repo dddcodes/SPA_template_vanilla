@@ -1,0 +1,73 @@
+:root {
+  --default-theme-color: #1b1b1b;
+  --default-color-2: #272727;
+  --default-color-3: #363636;
+  --default-color-4: #424242;
+  --alt-theme-color: #f8f9fa;
+
+  --primary-color: #007bff;
+
+  --success-color: #28a745;
+  --info-color: cadetblue;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+}
+
+/* Reset global styles for all elements */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+  flex-direction: column; /* Para que el contenido sea apilado de arriba hacia abajo */
+  text-align: center; /* Centrado del texto */
+
+  width: 100%;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+
+  background-color: var(--default-theme-color);
+}
+
+* {
+  color: var(--alt-theme-color);
+  transition: all 0.3s ease-in-out; /* Agrega una transición para todos los cambios */
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#app {
+  width: 100%;
+  padding: 10px;
+  background-color: cadetblue;
+}
+
+/*
+    CENTRAR CONTENIDO:
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  Para que el contenido sea apilado de arriba hacia abajo 
+    text-align: center; Centrado del texto 
+
+*/
+
+#navigationBar {
+  background: var(--default-color-2);
+  width: 100%;
+  padding: 15px 0;
+}
+
+#navigationBar a {
+  font-size: 15px;
+  color: var(--alt-theme-color);
+
+  padding: 20px 25px;
+}
+
+#navigationBar a:hover {
+  background-color: var(--default-color-3);
+}
