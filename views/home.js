@@ -1,5 +1,6 @@
 import * as u from "../utils.js";
 import { CONFIG } from "../config.js";
+import getVideoCard from "../components/videoCard.js";
 
 
 const actualView = CONFIG.routes.home;
@@ -23,6 +24,11 @@ export default () => {
         <input type="text" class="input" placeholder="Input por defecto">
         <input type="password" class="input" placeholder="Password por defecto">
 
+        <div class="catalago-container">
+          ${getVideoCard()}
+          ${getVideoCard()}
+          ${getVideoCard()} 
+        </div>
         
     `;
 };

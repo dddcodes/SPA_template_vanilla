@@ -1,4 +1,6 @@
-export default getNavBar = () => {
+import {CONFIG} from "../config.js";
+
+export default () => {
     document.querySelector("body").innerHTML = `
     
         <nav id="navigationBar">

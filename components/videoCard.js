@@ -1,4 +1,4 @@
-export default getVideoCard = () => {
+export default () => {
   return `
   <div class="video-card">
 
