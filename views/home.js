@@ -1,6 +1,7 @@
 import * as u from "../utils.js";
 import { CONFIG } from "../config.js";
 
+
 const actualView = CONFIG.routes.home;
 
 export default () => {
@@ -18,8 +19,10 @@ export default () => {
         <button class="button">Boton por defecto</button>
         <button class="button alt">Boton alternativo</button>
         <button class="button onlyBorder">Boton de solo borde</button>
-        
+
         <input type="text" class="input" placeholder="Input por defecto">
         <input type="password" class="input" placeholder="Password por defecto">
+
+        
     `;
 };

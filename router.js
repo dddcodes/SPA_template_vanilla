@@ -1,4 +1,4 @@
-import { CONFIG } from "./config.js";
+import {CONFIG} from "./config.js";
 
 const ROUTE = CONFIG.routes; // Obtiene las rutas desde el archivo de configuración
 
@@ -8,6 +8,7 @@ export const router = async () => {
     "/": () => import(`./views/${ROUTE.home.component}`), //inicio
     "/about": () => import(`./views/${ROUTE.about.component}`), //sobre nosotros
     "/contact": () => import(`./views/${ROUTE.contact.component}`), //contacto
+    "/catalog": () => import(`./views/${ROUTE.catalog.component}`), //
   };
 
   const view =

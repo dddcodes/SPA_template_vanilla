@@ -1,5 +1,5 @@
 import { router, navigateTo } from "./router.js";
-import { CONFIG } from "./config.js";
+import {CONFIG} from "./config.js";
 
 document.querySelector("body").innerHTML = `
 
@@ -8,6 +8,7 @@ document.querySelector("body").innerHTML = `
         <a href="/" data-link>${CONFIG.routes.home.title}</a>
         <a href="/about" data-link>${CONFIG.routes.about.title}</a>
         <a href="/contact" data-link>${CONFIG.routes.contact.title}</a>
+        <a href="/catalog" data-link>${CONFIG.routes.catalog.title}</a>
         </nav>
     <button id="navigationButton">
 			<ion-icon name="grid-outline" role="img" class="md hydrated" aria-label="grid outline"></ion-icon>
