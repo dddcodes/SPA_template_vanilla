@@ -20,5 +20,11 @@ export const CONFIG = {
       title: "Contáctanos",
       description: "Quieres comunicarte con nosotros? Hazlo aquí!",
     },
+    catalog: {
+      component: "catalog.js",
+      path: "/catalog",
+      title: "Catálogo",
+      description: "Mira nuestros productos!",
+    }
   },
 };
