@@ -4,6 +4,7 @@ import { CONFIG } from "./config.js";
 document.querySelector("body").innerHTML = `
 
     <nav id="navigationBar">
+        <div class="iconAndText">${CONFIG.proyectName}</div>
         <a href="/" data-link>${CONFIG.routes.home.title}</a>
         <a href="/about" data-link>${CONFIG.routes.about.title}</a>
         <a href="/contact" data-link>${CONFIG.routes.contact.title}</a>

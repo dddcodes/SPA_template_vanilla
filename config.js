@@ -1,5 +1,5 @@
 export const CONFIG = {
-  proyectName: "APP SPA",
+  proyectName: "SPA PROYECT",
   version: "1.0.0",
   routes: {
     home: {

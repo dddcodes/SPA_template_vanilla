@@ -3,9 +3,15 @@
   --default-color-2: #272727;
   --default-color-3: #363636;
   --default-color-4: #424242;
-  --alt-theme-color: #f8f9fa;
+  --alt-color: #f8f9fa;
+  --alt-color-2: #b7b6b6;
+  --alt-color-3: #6e6e6e;
+  --alt-color-4: #595959;
 
   --primary-color: #007bff;
+  --secondary-color: #60a1db;
+
+  --primary-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color));;
 
   --success-color: #28a745;
   --info-color: cadetblue;
@@ -13,6 +19,9 @@
   --danger-color: #dc3545;
 
   --navigation-button-z-index: 3;
+
+  --border-radius: 3px;
+  --border-radius-2: 5px;
 }
 
 /* Reset global styles for all elements */
@@ -34,66 +43,102 @@ body {
 }
 
 * {
-  color: var(--alt-theme-color);
+  color: var(--alt-color);
   transition: all 0.3s ease-in-out; /* Agrega una transición para todos los cambios */
   box-sizing: border-box;
+
   text-decoration: none;
-  
-  
+  text-align: left;
 }
 
 ::selection {
-  background-color: var(--alt-theme-color);
+  background-color: var(--alt-color);
   color: var(--default-color);
 }
 
 #app {
-  width: 100%;
-  padding: 10px;
+  width: 70%;
+  padding: 70px 5px;
   background-color: var(--default-color);
 }
 
-/*
-    CENTRAR CONTENIDO:
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;  Para que el contenido sea apilado de arriba hacia abajo 
-    text-align: center; Centrado del texto 
-
-*/
+/* Estilos para el navBar ============================================*/
 
 #navigationBar {
-  display: block; /* Ocultar el navBar por defecto */
+  display: flex;
+
   background: var(--default-color-2);
-  width: 100%;
-  padding: 15px 0;
+  width: 97%;
+
+  padding: 5px 0;
+  border-radius: 0 0 var(--border-radius-2) var(--border-radius-2);
+
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+
+  transition: all 0.3s linear;
+  animation: navBarEntryAnimation 1.25s ease-in-out;
 }
 
-#navigationBar a {
+@keyframes navBarEntryAnimation {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#navigationBar > a {
+  justify-content: flex-start; /* Alinea a la izquierda */
+
+  align-items: stretch; /* Igual altura para todos */
+  box-sizing: border-box;
   font-size: 15px;
-  color: var(--alt-theme-color);
+  color: var(--alt-color);
 
-  padding: 20px 25px;
+  border: var(--default-color-4) solid 0;
+  border-radius: var(--border-radius);
+
+  display: inline-block; /* Mantiene el tamaño del contenido */
+  padding: 10px 20px;
+
+  color: white;
+
+  margin-right: 20px; /* Espacio entre botones */
+  text-align: center;
 }
 
-#navigationBar a:hover {
+#navigationBar > a:hover {
   background-color: var(--default-color-3);
 }
 
-#navigationBar a:active {
+#navigationBar > a:active {
   background-color: var(--default-color-4);
 }
 
+#navigationBar > .iconAndText {
+  width: max-content;
+  font-size: 12px;
+
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  border: var(--primary-color) solid 1.5px;
+
+
+  margin-right: auto;
+  margin-left: 5px;
+}
+
 #navigationButton {
-  background-color: var(--default-color-2);
+  background-color: var(--default-color);
   border: none;
 
   width: 60px;
   height: 60px;
   padding: 15px;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 
   font-size: 30px;
 
@@ -112,14 +157,19 @@ body {
 }
 
 #navigationButton:hover {
-  background-color: var(--default-color-3);
+  background-color: var(--default-color-2);
 }
 
 #navigationButton:active {
-  background-color: var(--alt-theme-color);
+  background-color: var(--alt-color);
 }
 
+/* Dispositivos mas chicos ============================================*/
 @media (max-width: 600px) {
+  #app {
+    width: 100%;
+  }
+
   #navigationButton {
     display: flex; /* Mostrar el botón de navegación en pantallas pequeñas */
   }
@@ -128,48 +178,164 @@ body {
     display: block; /* Asegurarse de que el navBar esté oculto en pantallas pequeñas */
     width: 99%;
 
-    border-radius: 5px;
+    border-radius: var(--border-radius-2);
 
     position: absolute;
 
     left: -100%; /* Empuja la caja fuera de la pantalla por la izquierda */
-    transition: transform 1s ease-in-out; /* Transición de 1 segundo */
+    transition: transform 0.6s ease-in-out; /* Transición de 1 segundo */
   }
 
   #navigationBar.show {
     transform: translateX(100%);
   }
 
-  #navigationBar a {
+  #navigationBar > a {
     display: block;
     justify-content: left;
     flex-direction: column;
+    width: 100%;
+    padding: 20px;
   }
 
-  #navigationBar a:hover {
-    border-left: white solid 50px;;
+  #navigationBar > a:hover {
+    border-left: var(--default-color-4) solid 50px;
   }
+
+  #navigationBar > .iconAndText {
+    display: block;
+    justify-content: left;
+    flex-direction: column;
+
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+    border: 0;
+  }
+}
+
+/* Estilos para los contenedores principales ============================================*/
+
+#app > p,
+#app > div {
+  margin: 10px 0;
+
+  padding: 15px;
+  font-size: 15px;
+  text-align: left;
 }
 
 .titleBox {
-  background-color: var(--primary-color);
   border-radius: 3px;
   width: 100%;
-  padding: 15px;
+  padding: 30px 15px !important;
 
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px !important;
+
+  text-align: left;
 }
+
+p.justifyText,
+div.justifyText {
+  text-align: justify;
+}
+
+.llamativeBox {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius);
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+}
+
 
 .basicBox {
   background-color: var(--default-color-2);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   width: 100%;
   padding: 15px;
 }
 
 .basicBoxOnlyBorder {
-  border: 1px solid var(--default-color-3);
+  border: 1.5px solid var(--default-color-3);
   border-radius: 3px;
   padding: 15px;
+}
+
+/* Estilos para los botones ============================================*/
+
+.button {
+  background-color: var(--default-color-2);
+  border: none;
+
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+
+  font-size: 15px;
+
+  margin: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--default-color-3);
+}
+
+.button:active {
+  background-color: var(--default-color-4);
+}
+
+.button.alt{
+  background-color: var(--alt-color);
+  color: var(--default-color-2);
+}
+
+.button.alt:hover {
+  background-color: var(--alt-color-2);
+}
+
+.button.alt:active {
+  background-color: var(--alt-color-3);
+}
+
+.button.onlyBorder{
+  background-color: var(--default-color);
+  border: 1.5px solid var(--default-color-2);
+}
+
+.button.onlyBorder:hover {
+  border-color: var(--default-color-3);
+}
+
+.button.onlyBorder:active {
+  background-color: var(--default-color-3);
+}
+
+/* Estilos para los inputs ============================================*/
+
+input,
+textarea {
+  background-color: var(--default-color);
+  border: var(--default-color-2) solid 1.5px;
+
+  outline: none;
+
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+
+  font-size: 15px;
+
+  margin: 5px;
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--default-color-3);
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--alt-color);
 }
