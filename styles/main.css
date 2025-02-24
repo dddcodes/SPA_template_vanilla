@@ -51,6 +51,8 @@ body {
   color: var(--alt-color);
   transition: all 0.3s ease-in-out; /* Agrega una transición para todos los cambios */
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-variant: normal;
 
   text-decoration: none;
   text-align: left;
@@ -62,23 +64,20 @@ body {
 }
 
 #app {
-  
   width: 70%;
   padding: 70px 5px;
   background-color: var(--default-color);
 
   transition: opacity 0.5s ease-in-out;
-  
 }
 
-.animated{
+.animated {
   animation: appEntryAnimation 3s ease-in-out;
 }
 
 @keyframes appEntryAnimation {
   from {
     opacity: 0;
-
   }
   to {
     opacity: 1;
@@ -89,8 +88,6 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-
-
 
 /* Estilos para el navBar ============================================*/
 
@@ -109,7 +106,7 @@ body {
 
   z-index: var(--navigation-bar-z-index);
   position: fixed;
-  left: 5px;
+
   top: 5px;
 
   transition: all 0.3s linear;
@@ -200,7 +197,6 @@ body {
 
 /* Dispositivos mas chicos ============================================*/
 @media (max-width: 700px) {
-
   #navigationButton {
     display: flex; /* Mostrar el botón de navegación en pantallas pequeñas */
   }
@@ -245,14 +241,14 @@ body {
 }
 
 @media (max-width: 900px) {
-  #app{
+  #app {
     width: 100%;
   }
 }
 
 /* Estilos para los contenedores principales ============================================*/
 
-#app > p{
+#app > p {
   margin: 10px 0;
 
   padding: 15px;
@@ -376,12 +372,10 @@ textarea:focus {
 /* Estilos para las CAJAS DE VIDEO ============================================*/
 
 .video-card {
-  width: 320px;
+  width: 270px;
   cursor: pointer;
 
   background-color: var(--default-color);
-  margin: 12px;
-
 
   border-radius: var(--border-radius-2);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -396,7 +390,7 @@ textarea:focus {
 }
 .thumbnail {
   width: 100%;
-  height: 180px;
+  height: 151.88px;
   background: var(--default-color-3);
   border-radius: var(--border-radius-2);
   position: relative;
@@ -422,9 +416,9 @@ textarea:focus {
   display: none;
   position: absolute;
 
-  bottom: 30px;
-  right: -80px;
-  background: #1b1b1b;
+  bottom: 0;
+  right: 25px;
+  background: var(--default-color);
   color: white;
   font-size: 15px;
 
@@ -432,6 +426,14 @@ textarea:focus {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   width: max-content;
+}
+
+.tooltip:hover {
+  background-color: var(--default-color-2);
+}
+
+.tooltip:active {
+  background-color: var(--default-color-3);
 }
 .video-info {
   display: flex;
@@ -452,4 +454,29 @@ textarea:focus {
   font-size: 12px;
   color: var(--default-color-4);
   padding: 10px 0 0;
+}
+
+/* Estilos de CATALOGO de video-cards ============================================*/
+
+.catalog-container {
+  margin: 15px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center; /* Centra los items horizontalmente */
+  align-items: center; /* Centra los items verticalmente */
+
+  padding: 0;
+  gap: 5px;
+}
+
+@media (max-width: 600px) {
+  .video-card {
+    width: 100vw;
+    margin-bottom: 10px;
+  }
+  .video-card > .thumbnail {
+    height: 50vw;
+  }
 }

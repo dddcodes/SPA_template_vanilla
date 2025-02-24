@@ -24,7 +24,7 @@ export default () => {
         <input type="text" class="input" placeholder="Input por defecto">
         <input type="password" class="input" placeholder="Password por defecto">
 
-        <div class="catalago-container">
+        <div class="catalog-container">
           ${getVideoCard()}
           ${getVideoCard()}
           ${getVideoCard()} 
