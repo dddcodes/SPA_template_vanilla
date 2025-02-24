@@ -1,13 +1,17 @@
 import { router, navigateTo } from "./router.js";
-import {CONFIG} from "./config.js";
+import { CONFIG } from "./config.js";
 import getNavBar from "../components/navBar.js";
 
 getNavBar(); // Carga la barra de navegación
 
 // ==> cosas para el botón de navegación (dispositivos moviles)
-document.getElementById("navigationButton").addEventListener("click", function() {
-  document.getElementById("navigationBar").classList.toggle("show");
-});
+document
+  .getElementById("navigationButton")
+  .addEventListener("click", function () {
+    document.getElementById("navigationBar").classList.toggle("show");
+  });
+
+
 
 // ==> cosas para lo del router
 document.addEventListener("DOMContentLoaded", () => {

@@ -14,7 +14,7 @@ export default () => {
                 <ion-icon name="grid-outline" role="img" class="md hydrated" aria-label="grid outline"></ion-icon>
             </button>  
     
-        <div id="app"></div>
+        <div id="app" class="animated"></div>
         
     `; // Crea la barra de navegación y el contenedor de la aplicación...
 }
