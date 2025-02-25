@@ -1,7 +1,8 @@
 import * as u from "../utils.js";
 import { CONFIG } from "../config.js";
 import getVideoCard from "../components/videoCard.js";
-
+import { videosData } from "../data/videos.js";
+console.log(videosData);
 
 const actualView = CONFIG.routes.home;
 
