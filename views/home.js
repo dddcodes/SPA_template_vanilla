@@ -12,10 +12,10 @@ export default () => {
         <div class="titleBox">
           Bienvenido a ${CONFIG.proyectName}!
         </div>
-        <p class="llamativeBox">${actualView.description}</p>
-        <p class="basicBox">${actualView.description}</p>
-        <p class="basicBoxOnlyBorder">${actualView.description}</p>
-        <p>${actualView.description}</p>
+        <p class="llamativeBox">ESTO ES UNA PLANTILLA DE OLIVARES EN DESARROLLO...</p>
+        <p class="basicBox">Estas cajas son de demostracion de los estilos responsive-Design de esta plantilla...</p>
+        <p class="basicBoxOnlyBorder">Esto es un mini proyecto del tipo Single-Page Application (S.P.A) Open Source en latino</p>
+        <p>Esta plantilla tambien incluye estilos web CSS vanilla responsive-Design y extras como tarjetas de video y </p>
 
         <button class="button">Boton por defecto</button>
         <button class="button alt">Boton alternativo</button>
