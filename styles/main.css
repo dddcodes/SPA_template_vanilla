@@ -72,7 +72,7 @@ body {
 }
 
 .animated {
-  animation: appEntryAnimation 3s ease-in-out;
+  animation: appEntryAnimation 2s ease-in-out;
 }
 
 @keyframes appEntryAnimation {
@@ -255,18 +255,6 @@ body {
   font-size: 15px;
   text-align: left;
 }
-
-.titleBox {
-  border-radius: 3px;
-  width: 100%;
-  padding: 30px 15px !important;
-
-  font-weight: bold;
-  font-size: 35px !important;
-
-  text-align: left;
-}
-
 p.justifyText,
 div.justifyText {
   text-align: justify;
@@ -279,6 +267,29 @@ div{
 div > p,h1,h2,h3,h4,h5,span{
   margin: 0;
 }
+
+a{
+  color: var(--info-color);
+  border-bottom: 2px solid var(--info-color);  /* 2px de grosor, color negro */
+  display: inline; /* Asegura que solo afecte al texto */
+}
+
+a:hover{
+  color: var(--alt-color);
+  border-color: var(--alt-color);
+}
+
+.titleBox {
+  border-radius: 3px;
+  width: 100%;
+  padding: 30px 15px !important;
+
+  font-weight: bold;
+  font-size: 35px !important;
+
+  text-align: left;
+}
+
 
 
 .basicBox {
@@ -313,6 +324,9 @@ div > p,h1,h2,h3,h4,h5,span{
   padding: 10px 20px;
   border-radius: var(--border-radius);
 
+  outline: none; /* Quita el borde de enfoque */
+  -webkit-tap-highlight-color: transparent; /* Quita el resaltado azul en móviles */
+
   font-size: 15px;
 
   margin: 5px;
@@ -324,6 +338,7 @@ div > p,h1,h2,h3,h4,h5,span{
 }
 
 .button:active {
+  background: none;
   background-color: var(--default-color-4);
 }
 

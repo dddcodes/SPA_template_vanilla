@@ -32,6 +32,10 @@ export default () => {
               ${getVideoCard()}
           </div>
         </div>
+
+        <a href="https://github.com/dddcodes/SPA_template_vanilla">
+          Github del proyecto
+        </a>
         
     `;
 };

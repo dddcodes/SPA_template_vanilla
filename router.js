@@ -7,9 +7,13 @@ export const router = async () => {
   const navBar = document.querySelector("#navigationBar");
 
   // Truco para reiniciar la animación de #app
-  app.classList.remove("animated");
-  void app.offsetWidth;
-  app.classList.add("animated");
+  app.style.visibility = "hidden";
+  setTimeout(() => {
+    app.classList.remove("animated");
+    void app.offsetWidth;
+    app.classList.add("animated");
+    app.style.visibility = "visible";
+  }, 500);
 
   if (navBar.classList.contains("show")) navBar.classList.remove("show");
 
@@ -18,7 +22,7 @@ export const router = async () => {
     "/": () => import(`./views/${ROUTE.home.component}`), //inicio
     "/about": () => import(`./views/${ROUTE.about.component}`), //sobre nosotros
     "/contact": () => import(`./views/${ROUTE.contact.component}`), //contacto
-    "/catalog": () => import(`./views/${ROUTE.catalog.component}`), //
+    "/catalog": () => import(`./views/${ROUTE.catalog.component}`), //catalogo
   };
 
   const view =
