@@ -27,7 +27,9 @@ export default () => {
           <h1>Sugerencias:</h1>
           
           <div class="catalog-container">
-              ${getVideoCard("estres")}
+              ${getVideoCard()}
+              ${getVideoCard()}
+              ${getVideoCard()}
           </div>
         </div>
         

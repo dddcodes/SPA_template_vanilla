@@ -6,7 +6,7 @@ export const videosData = [
       id: 1,
       title: "Cómo manejar la ansiedad",
       url: "https://www.youtube.com/watch?v=abc123",
-      category: "ansiedad",
+      category: "estres",
       summary: "Este video explica técnicas para controlar la ansiedad y mejorar la salud mental."
     },
     {

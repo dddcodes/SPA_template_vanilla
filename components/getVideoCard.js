@@ -1,15 +1,20 @@
 import { videosData } from "../data/videos.js";
 import getCategoryName from "./getCategoryName.js";
-import getVideoThumbnail from "./getVideoThumbnail.js";
-import getVideoTitle from "./getVideoTitle.js";
 
 export default (specificCategory) => {
   let video;
+  let random;
   if (specificCategory) {
+    //se buscan videos con una categoria, y se elige uno al azar
     console.log("Categoria especifica seleccionada: " + specificCategory);
-    video = videosData.find((video) => video.category === specificCategory);
+
+    let potentialVideos = videosData.filter(
+      (video) => video.category === specificCategory
+    );
+    random = Math.floor(Math.random() * potentialVideos.length);
+    video = potentialVideos[random];
   } else {
-    let random = Math.floor(Math.random() * videosData.length);
+    random = Math.floor(Math.random() * videosData.length);
     video = videosData[random];
   }
 
@@ -28,13 +33,13 @@ export default (specificCategory) => {
       <div class="text-info">
 
         <div class="title">
-          ${getVideoTitle("https://www.youtube.com/watch?v=a6LyzYV9YEk")}
+          ${video.title}
         </div>
 
-        <div class="author">
-          ${getCategoryName(video.category)} • 
-          <span class="date">${video.url}</span>
+        <div class="category">
+          ${getCategoryName(video.category)}
         </div>
+        <span class="link">${video.url}</span>
             
       </div>
 
