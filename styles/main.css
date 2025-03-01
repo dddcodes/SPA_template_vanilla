@@ -249,7 +249,7 @@ body {
 /* Estilos para los contenedores principales ============================================*/
 
 #app > p {
-  margin: 10px 0;
+  margin: 0;
 
   padding: 15px;
   font-size: 15px;
@@ -272,25 +272,36 @@ div.justifyText {
   text-align: justify;
 }
 
-.llamativeBox {
-  background: var(--primary-gradient);
-  border-radius: var(--border-radius);
-  width: 100%;
-  padding: 15px;
-  font-weight: bold;
+div{
+  padding: 10px;
 }
+
+div > p,h1,h2,h3,h4,h5,span{
+  margin: 0;
+}
+
 
 .basicBox {
   background-color: var(--default-color-2);
   border-radius: var(--border-radius);
   width: 100%;
-  padding: 15px;
+  margin: 10px 0 !important;
+  
 }
 
-.basicBoxOnlyBorder {
+.basicBox.llamative {
+  background: var(--primary-gradient);
+  border-radius: var(--border-radius);
+  width: 100%;
+
+  font-weight: bold;
+}
+
+.basicBox.OnlyBorder {
+  background-color: var(--default-color);
   border: 1.5px solid var(--default-color-3);
   border-radius: 3px;
-  padding: 15px;
+
 }
 
 /* Estilos para los botones ============================================*/
@@ -374,6 +385,7 @@ textarea:focus {
 .video-card {
   width: 270px;
   cursor: pointer;
+  padding: 0;
 
   background-color: var(--default-color);
 
@@ -394,6 +406,8 @@ textarea:focus {
   background: var(--default-color-3);
   border-radius: var(--border-radius-2);
   position: relative;
+  padding: 0;
+
 }
 .menu {
   position: absolute;
@@ -439,15 +453,18 @@ textarea:focus {
   display: flex;
   align-items: center;
   padding: 10px;
+
 }
 
 .text-info {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 .title {
   font-weight: bold;
   font-size: 16px;
+  padding: 0;
 }
 .author,
 .date {

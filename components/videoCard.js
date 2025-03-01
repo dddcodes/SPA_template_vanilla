@@ -1,8 +1,15 @@
 import { videosData } from "../data/videos.js";
-
+import getCategoryName from "../components/getCategoryName.js";
 
 export default (specificCategory) => {
-  const video = videosData.find(video => video.category === "estres")
+  let video;
+  if (specificCategory) {
+    console.log("HOLA");
+    video = videosData.find((video) => video.category === specificCategory);
+  } else {
+    let random = Math.floor(Math.random() * videosData.length);
+    video = videosData[random];
+  }
 
   return `
   <div class="video-card">
@@ -23,7 +30,7 @@ export default (specificCategory) => {
         </div>
 
         <div class="author">
-          ${video.category} • 
+          ${getCategoryName(video.category)} • 
           <span class="date">${video.url}</span>
         </div>
             

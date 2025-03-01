@@ -1,5 +1,5 @@
 export const CONFIG = {
-  proyectName: "SPA PROYECT",
+  proyectName: "SPATLY",
   version: "1.0.0",
   routes: {
     home: {

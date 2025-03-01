@@ -12,16 +12,19 @@ export default () => {
             ${actualView.title}
         </div>
         <p>${actualView.description}</p>
-        <div class="catalog-container">
-            ${getVideoCard()}
-            ${getVideoCard()}
-            ${getVideoCard()} 
-            ${getVideoCard()}
-            ${getVideoCard()}
-            ${getVideoCard()} 
-            ${getVideoCard()}
-            ${getVideoCard()}
-            ${getVideoCard()} 
+        
+        <div class="basicBox OnlyBorder">
+            <div class="catalog-container">
+                ${getVideoCard()}
+                ${getVideoCard()}
+                ${getVideoCard()} 
+                ${getVideoCard()}
+                ${getVideoCard()}
+                ${getVideoCard()} 
+                ${getVideoCard()}
+                ${getVideoCard()}
+                ${getVideoCard()} 
+            </div>
         </div>
     `;
 };
