@@ -21,12 +21,8 @@ export default (specificCategory) => {
   return `
   <div class="video-card">
 
-    <div class="thumbnail">
-      <div class="menu">
-        ⋮
-        <div class="tooltip">Ver mas tarde</div>
-      </div>
-    </div>
+    <img class="thumbnail" src="https://i.ytimg.com/vi/p4GUuATceC0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCN9YZlOtKAvNevEJLasEBHEgX6kw">
+    </img>
 
     <div class="video-info">
 

@@ -390,15 +390,16 @@ textarea:focus {
   background-color: var(--default-color);
 
   border-radius: var(--border-radius-2);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
 
   justify-self: center;
 }
 .video-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-7px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  outline: var(--alt-color) solid .5px;
 
-  background-color: var(--default-color-2);
 }
 .thumbnail {
   width: 100%;
@@ -409,46 +410,7 @@ textarea:focus {
   padding: 0;
 
 }
-.menu {
-  position: absolute;
 
-  right: 0;
-  cursor: pointer;
-  font-size: 22px;
-
-  padding: 2px 10px;
-  border-radius: 0 5px;
-}
-
-.menu:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-.menu:hover .tooltip {
-  display: block;
-}
-.tooltip {
-  display: none;
-  position: absolute;
-
-  bottom: 0;
-  right: 25px;
-  background: var(--default-color);
-  color: white;
-  font-size: 15px;
-
-  padding: 7px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  width: max-content;
-}
-
-.tooltip:hover {
-  background-color: var(--default-color-2);
-}
-
-.tooltip:active {
-  background-color: var(--default-color-3);
-}
 .video-info {
   display: flex;
   align-items: center;

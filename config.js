@@ -18,13 +18,13 @@ export const CONFIG = {
       component: "contact.js",
       path: "/contact",
       title: "Contáctanos",
-      description: "Quieres comunicarte con nosotros? Hazlo aquí!"
+      description: "Quieres comunicarte con nosotros? Apoco si"
     },
     catalog: {
       component: "catalog.js",
       path: "/catalog",
       title: "Catálogo",
-      description: "Mira nuestros productos!"
+      description: "Admirad vuestro ser y mejorad cada dia!"
     }
   }
 };
