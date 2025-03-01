@@ -1,6 +1,7 @@
 import { router, navigateTo } from "./router.js";
 import { CONFIG } from "./config.js";
 import getNavBar from "../components/navBar.js";
+import { videosData } from "./data/videos.js";
 
 getNavBar(); // Carga la barra de navegación
 
@@ -30,5 +31,6 @@ window.addEventListener("popstate", router);
 // ==> COSAS INFORMATIVAS / INUTILES =========================================================
 
 console.log(CONFIG);
+console.log(videosData.find(video => video.category === "estres"))
 
 // ========================================================

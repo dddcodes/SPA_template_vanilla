@@ -1,13 +1,12 @@
 import * as u from "../utils.js";
 import { CONFIG } from "../config.js";
-import getVideoCard from "../components/videoCard.js";
-import { videosData } from "../data/videos.js";
-console.log(videosData);
+import videoCard from "../components/videoCard.js";
 
 const actualView = CONFIG.routes.home;
 
 export default () => {
   u.updatePageTitle(actualView.title);
+  
 
   return `
         <div class="titleBox">
@@ -26,9 +25,7 @@ export default () => {
         <input type="password" class="input" placeholder="Password por defecto">
 
         <div class="catalog-container">
-          ${getVideoCard()}
-          ${getVideoCard()}
-          ${getVideoCard()} 
+            ${videoCard("estres")}
         </div>
         
     `;

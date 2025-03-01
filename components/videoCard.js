@@ -1,11 +1,16 @@
-export default () => {
+import { videosData } from "../data/videos.js";
+
+
+export default (specificCategory) => {
+  const video = videosData.find(video => video.category === "estres")
+
   return `
   <div class="video-card">
 
     <div class="thumbnail">
       <div class="menu">
         ⋮
-        <div class="tooltip">ver mas tarde</div>
+        <div class="tooltip">Ver mas tarde</div>
       </div>
     </div>
 
@@ -14,12 +19,12 @@ export default () => {
       <div class="text-info">
 
         <div class="title">
-          Plantilla de caja de video sencilla minimalista lol
+          ${video.title}
         </div>
 
         <div class="author">
-          D. Olivares • 
-          <span class="date">07 de febrero de 2025</span>
+          ${video.category} • 
+          <span class="date">${video.url}</span>
         </div>
             
       </div>
